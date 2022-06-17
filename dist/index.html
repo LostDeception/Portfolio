@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Timothy Mickelson</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <script src="./index.js"></script>
+
+        <!-- Import JQUERY minified CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    
+        <!-- Import FONTAWESOME Kit CDN -->
+        <script src="https://kit.fontawesome.com/45ff824e5e.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header_background"></div>
+            <div class="header_content_container">
+                <div class="header_content">
+                    <!-- Avatar photo -->
+                    <img class="header_avatar" src="./resources/myAvatar.png" alt="personal avatar image">
+                    
+                    <!-- Name, Brief Description -->
+                    <h1 class="name">Timothy <span class="red-text">Mickelson</span></h1>
+                    <h3 id="description">Web Developer</h3>
+
+                    <!-- Linkedin, upwork, github icons -->
+                    <div class="social_icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- List of best projects -->
+                <div class="project">
+                    <div class="project_content"></div>
+                    <ul class="project_list">
+                         <li class="project_list_item project_active" data-="">
+                             <h3>Visual <span class="orange-text">Spigot</span></h3>
+                         </li>
+                         <li class="project_list_item">
+                            <h3>Warm<span class="green-text">Up</span></h3>
+                         </li>
+                         <li class="project_list_item">
+                            <h3>D<span class="red-text">TAC</span></h3>
+                         </li>
+                         <li class="project_list_item"></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- This section contains a list of Project cards...
+            when user is on a large screen the cards will display on header section (list of best projects above). When 
+            user is on small screen projects will display in this section -->
+            <section class="sm_projects">
+                <div class="project_card">
+                    <div class="project_card_info">
+                        <h1 class="project_card_title">{Visual <span class="orange-text">Spigot}</span></h1>
+                        <h4>A Minecraft Server Wrapper</h4>
+                        <p class="project_card_description">VisualSpigot comes with a unique and beautifully designed interface for starting local Minecraft servers. 
+                            You can have as many servers as you want and access each of them within the same window.</p>
+
+                        <h4>Made With</h4>
+                        <ul>
+                            <li>Html5</li>
+                            <li>SCSS</li>
+                            <li>Javascript</li>
+                            <li>JQuery</li>
+                        </ul>
+
+                        <a href="https://www.spigotmc.org/resources/visual-spigot.87912/" target="_blank" class="download-link">Download Page</a>
+                    </div>
+                    <div class="project_card_feature">
+                        <video src="./resources/VisualSpigot.mp4" controls></video>
+                        
+
+                        <div class="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="ratings_quote">User <span class="purple-text">_jcc_</span> states: "This is just what I needed! As a developer, trying to create plugins for multiple versions is EXTREMELY 
+                            annoying due to the fact that you have to have many different servers and they're all spread around. This 
+                            fixes EVERYTHING!!! The GUI is AWESOME, everything is simple and it supports many server versions!"</blockquote>
+                    </div>
+                </div>
+                <div class="project_card"></div>
+                <div class="project_card"></div>
+                <div class="project_card"></div>
+            </section>
+
+            <!-- Display all Education, Bootcamps and Certificates in this section -->
+            <section class="education_container">
+
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>

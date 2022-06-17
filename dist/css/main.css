@@ -1,0 +1,418 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+hr {
+  margin: 0;
+}
+
+/* 
+    Options for diag angle
+    45deg, -45deg, 135deg, -135deg
+*/
+/* Header, Main, Footer all take 100% of page for smooth scrolling */
+.header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #424242;
+}
+
+.header .header_background {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  background: linear-gradient(135deg, transparent 50%, #282c34 10%) top left;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.header .header_content_container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background: linear-gradient(-45deg, transparent 50%, rgba(250, 250, 250, 0.3) 10%) top left;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header .header_content {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.header .header_avatar {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.name {
+  color: #424242;
+}
+
+.description {
+  color: white;
+}
+
+.social_icons {
+  width: auto;
+}
+
+.social_icons i {
+  width: 40px;
+  font-size: 28px;
+  text-align: left;
+  color: #424242;
+}
+
+main {
+  height: 100%;
+}
+
+/* Container to display best projects */
+.project {
+  width: 800px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 5%;
+  background-color: transparent;
+  -webkit-box-shadow: -3px -3px 30px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: -3px -3px 30px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.project .project_content {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+
+.project .project_card {
+  width: auto;
+  margin: 0px !important;
+}
+
+.project .project_list {
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.project .project_list li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  background-color: white;
+  border-top: 4px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.project .project_list li h3 {
+  margin: 0;
+  margin-bottom: 4px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.project .project_list li:first-child {
+  margin-left: 0px !important;
+}
+
+.project .project_list li:last-child {
+  margin-right: 0px !important;
+}
+
+.project .project_list li:hover {
+  border-top: 4px solid #a5da90;
+  cursor: pointer;
+}
+
+.project .project_active {
+  border-top: 4px solid #a5da90 !important;
+}
+
+/* Container to hold project cards */
+.sm_projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project_card {
+  width: 75%;
+  height: 100%;
+  max-width: 800px;
+  margin: 8% 5% 8% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project_card .project_card_info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  padding: 18px;
+  border-right: 5px solid white;
+}
+
+.project_card .project_card_description {
+  line-height: 1.3em;
+  word-wrap: break-word;
+}
+
+.project_card .project_card_feature {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px;
+}
+
+.project_card .project_card_feature video {
+  width: 95%;
+  max-width: 350px;
+  max-height: 200px;
+  margin: 15px;
+}
+
+.project_card .project_card_feature blockquote {
+  font-size: 12px;
+}
+
+.ratings {
+  font-size: 20px;
+  color: #ffbb00;
+}
+
+.download-link {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4c9cca;
+  color: white;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+/* used to color words or phrases in sentence red */
+.red-text {
+  color: #d8767e;
+}
+
+.orange-text {
+  color: #ffa632;
+}
+
+.green-text {
+  color: #71c471;
+}
+
+.purple-text {
+  color: #e763e1;
+}
+
+.highlighted-text {
+  font-weight: bold;
+  color: #d8767e;
+}
+
+@media only screen and (max-width: 800px) {
+  .project_card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project_card .project_card_info {
+    border: none;
+    border-bottom: 5px solid white;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .header_content {
+    left: 8% !important;
+  }
+}
+
+@media only screen and (max-width: 1420px) {
+  .project {
+    width: 700px;
+    height: 450px;
+  }
+  .project_list_item h3 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .header_content {
+    top: 12% !important;
+  }
+  .project {
+    width: 600px;
+    height: 350px;
+    bottom: 5%;
+  }
+  .project_list_item h3 {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 1130px) {
+  .project_card_info h4 {
+    font-size: 12px;
+    padding-left: 12px;
+    margin-top: 8px;
+  }
+  .project_card_title {
+    font-size: 20px;
+    margin: 3px;
+  }
+  .project_card_description {
+    font-size: 14px;
+  }
+  .ratings {
+    display: none;
+  }
+  .ratings_quote {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .header_background {
+    background: linear-gradient(135deg, transparent 100%, #282c34 10%) top left !important;
+  }
+  .header_content {
+    position: unset !important;
+    text-align: center;
+  }
+  .header_content img {
+    width: 125px !important;
+    height: 125px !important;
+  }
+  .header_content h1 {
+    font-size: 16px;
+  }
+  .header_content h3 {
+    font-size: 14px;
+  }
+  .project {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
